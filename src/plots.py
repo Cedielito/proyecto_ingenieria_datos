@@ -1,45 +1,35 @@
 # src/plots.py
-"""
-Funciones para crear y guardar figuras en reports/figures/
-"""
 import pandas as pd
+import matplotlib
+matplotlib.use("Agg")
 import matplotlib.pyplot as plt
-from pathlib import Path
 from src.utils.logger import logger
-
 from src.config import FIGURES_DIR
 
 
-def plot_ventas_por_categoria(df: pd.DataFrame, output_path: Path = None) -> None:
-    """Genera gráfica de ventas totales por categoría."""
-    if output_path is None:
-        output_path = FIGURES_DIR / "ventas_por_categoria.png"
-
+def plot_ventas_por_categoria(df: pd.DataFrame) -> None:
+    output_path = FIGURES_DIR / "ventas_por_pais.png"
     output_path.parent.mkdir(parents=True, exist_ok=True)
 
-    ventas = df.groupby("categoria")["total_venta"].sum().sort_values(ascending=False)
+    top10 = df.groupby("Country")["TotalPrice"].sum().sort_values(ascending=False).head(10)
 
-    fig, ax = plt.subplots(figsize=(8, 5))
-    ventas.plot(kind="bar", ax=ax, color=["#2196F3", "#4CAF50", "#FF9800"])
-    ax.set_title("Ventas Totales por Categoría", fontsize=14, fontweight="bold")
-    ax.set_xlabel("Categoría")
+    fig, ax = plt.subplots(figsize=(10, 5))
+    top10.plot(kind="bar", ax=ax, color="#2196F3")
+    ax.set_title("Top 10 Países por Ventas Totales", fontsize=14, fontweight="bold")
+    ax.set_xlabel("País")
     ax.set_ylabel("Total Ventas ($)")
-    ax.tick_params(axis="x", rotation=0)
+    ax.tick_params(axis="x", rotation=45)
     plt.tight_layout()
-    plt.savefig(output_path, dpi=120)
+    plt.savefig(output_path, dpi=100)
     plt.close()
-    logger.success(f"  → Figura guardada: {output_path}")
+    logger.success(f"  Figura guardada: {output_path}")
 
 
-def plot_ventas_por_mes(df: pd.DataFrame, output_path: Path = None) -> None:
-    """Genera gráfica de ventas por mes."""
-    if output_path is None:
-        output_path = FIGURES_DIR / "ventas_por_mes.png"
-
+def plot_ventas_por_mes(df: pd.DataFrame) -> None:
+    output_path = FIGURES_DIR / "ventas_por_mes.png"
     output_path.parent.mkdir(parents=True, exist_ok=True)
 
-    df["mes"] = pd.to_datetime(df["fecha"]).dt.to_period("M").astype(str)
-    ventas_mes = df.groupby("mes")["total_venta"].sum()
+    ventas_mes = df.groupby("Month")["TotalPrice"].sum()
 
     fig, ax = plt.subplots(figsize=(10, 5))
     ventas_mes.plot(kind="line", ax=ax, marker="o", color="#2196F3", linewidth=2)
@@ -48,6 +38,6 @@ def plot_ventas_por_mes(df: pd.DataFrame, output_path: Path = None) -> None:
     ax.set_ylabel("Total Ventas ($)")
     ax.grid(True, alpha=0.3)
     plt.tight_layout()
-    plt.savefig(output_path, dpi=120)
+    plt.savefig(output_path, dpi=100)
     plt.close()
-    logger.success(f"  → Figura guardada: {output_path}")
+    logger.success(f"  Figura guardada: {output_path}")

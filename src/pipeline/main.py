@@ -1,18 +1,7 @@
 #!/usr/bin/env python3
 # src/pipeline/main.py
-"""
-ORQUESTADOR PRINCIPAL DEL PIPELINE ETL
-Ejecutar con:
-    python src/pipeline/main.py --mode full
-    python src/pipeline/main.py --mode ingest
-    python src/pipeline/main.py --mode clean
-    python src/pipeline/main.py --mode features
-    python src/pipeline/main.py --mode report
-"""
 import argparse
-import sys
 from src.utils.logger import logger
-
 
 MODOS_VALIDOS = ["full", "ingest", "clean", "features", "report"]
 
@@ -20,8 +9,7 @@ MODOS_VALIDOS = ["full", "ingest", "clean", "features", "report"]
 def parse_args():
     parser = argparse.ArgumentParser(
         prog="pipeline-etl",
-        description="Pipeline ETL modular para analisis de ventas.",
-        formatter_class=argparse.RawTextHelpFormatter,
+        description="Pipeline ETL modular - Online Retail II (1M+ filas).",
     )
     parser.add_argument(
         "--mode", "-m",
@@ -30,16 +18,16 @@ def parse_args():
         default="full",
         help="Modo: full | ingest | clean | features | report",
     )
-    parser.add_argument("--verbose", "-v", action="store_true", help="Logs detallados")
+    parser.add_argument("--verbose", "-v", action="store_true")
     return parser.parse_args()
 
 
 def run(mode: str) -> None:
     from src.config import verify_structure
 
-    logger.info("="*50)
-    logger.info("  PIPELINE ETL - INGENIERIA DE DATOS")
-    logger.info("="*50)
+    logger.info("=" * 55)
+    logger.info("  PIPELINE ETL - ONLINE RETAIL II (1M+ registros)")
+    logger.info("=" * 55)
     logger.info(f"Modo de ejecucion: [{mode.upper()}]")
 
     verify_structure()
@@ -68,24 +56,24 @@ def run(mode: str) -> None:
         if df is not None:
             _generate_report(df)
 
-    logger.info("="*50)
+    logger.info("=" * 55)
     logger.success("PIPELINE COMPLETADO EXITOSAMENTE")
-    logger.info("="*50)
+    logger.info("=" * 55)
 
 
 def _generate_report(df) -> None:
-    logger.info("="*50)
+    logger.info("=" * 55)
     logger.info("PASO 4: GENERACION DE REPORTE")
-    logger.info("="*50)
+    logger.info("=" * 55)
 
-    total_ventas = df["total_venta"].sum()
-    producto_top = df.groupby("producto")["total_venta"].sum().idxmax()
-    region_top = df.groupby("region")["total_venta"].sum().idxmax()
+    total_ventas = df["TotalPrice"].sum()
+    pais_top     = df.groupby("Country")["TotalPrice"].sum().idxmax()
+    producto_top = df.groupby("Description")["TotalPrice"].sum().idxmax()
 
     logger.info(f"  Total ventas:      ${total_ventas:,.2f}")
+    logger.info(f"  Pais top:          {pais_top}")
     logger.info(f"  Producto top:      {producto_top}")
-    logger.info(f"  Region top:        {region_top}")
-    logger.info(f"  Registros finales: {len(df)}")
+    logger.info(f"  Registros finales: {len(df):,}")
 
     try:
         from src.plots import plot_ventas_por_categoria, plot_ventas_por_mes

@@ -27,8 +27,8 @@ GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "")
 LOG_LEVEL = os.getenv("LOG_LEVEL", "INFO")
 
 # ── Archivos del pipeline ────────────────────────────────────────────────────
-RAW_FILE = RAW_DIR / "ventas_ficticias.csv"
-INTERIM_FILE = INTERIM_DIR / "ventas_interim.csv"
+RAW_FILE = RAW_DIR / "online_retail_II.csv"
+INTERIM_FILE = INTERIM_DIR / "retail_interim.csv"
 PROCESSED_FILE = PROCESSED_DIR / "tabla_final.csv"
 
 
