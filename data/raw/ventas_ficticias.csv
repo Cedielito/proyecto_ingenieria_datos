@@ -1,0 +1,31 @@
+id,fecha,producto,categoria,cantidad,precio_unitario,cliente_id,region,vendedor
+1,2024-01-03,Laptop Pro,Tecnología,2,1200.00,C001,Norte,V01
+2,2024-01-05,Mouse Inalámbrico,Tecnología,5,25.50,C002,Sur,V02
+3,2024-01-07,Silla Ergonómica,Mobiliario,1,350.00,C003,Centro,V01
+4,2024-01-10,Monitor 4K,Tecnología,3,400.00,C001,Norte,V03
+5,2024-01-12,Teclado Mecánico,Tecnología,4,80.00,C004,Este,V02
+6,2024-01-15,Escritorio,Mobiliario,2,250.00,C002,Sur,V01
+7,2024-01-18,Audífonos BT,Tecnología,6,60.00,C005,Oeste,V03
+8,2024-01-20,Laptop Pro,Tecnología,1,1200.00,C003,Centro,V02
+9,2024-01-22,,Tecnología,2,30.00,C001,Norte,V01
+10,2024-01-25,Webcam HD,Tecnología,-1,90.00,C006,Sur,V03
+11,2024-02-01,Monitor 4K,Tecnología,2,400.00,C002,Sur,V02
+12,2024-02-03,Silla Ergonómica,Mobiliario,3,350.00,C007,Norte,V01
+13,2024-02-05,Mouse Inalámbrico,Tecnología,10,25.50,C004,Este,V03
+14,2024-02-08,Laptop Pro,Tecnología,1,,C005,Oeste,V02
+15,2024-02-10,Escritorio,Mobiliario,4,250.00,C008,Centro,V01
+16,2024-02-12,Teclado Mecánico,Tecnología,2,80.00,C001,Norte,V03
+17,2024-02-15,Audífonos BT,Tecnología,8,60.00,C006,Sur,V02
+18,2024-02-18,Webcam HD,Tecnología,3,90.00,C002,Sur,V01
+19,2024-02-20,Monitor 4K,Tecnología,1,400.00,C009,Este,V03
+20,2024-02-22,Laptop Pro,Tecnología,2,1200.00,C003,Centro,V02
+21,2024-03-01,Mouse Inalámbrico,Tecnología,7,25.50,C007,Norte,V01
+22,2024-03-03,Silla Ergonómica,Mobiliario,2,350.00,C010,Sur,V03
+23,2024-03-05,Teclado Mecánico,Tecnología,5,80.00,C004,Este,V02
+24,2024-03-08,Audífonos BT,Tecnología,3,60.00,C008,Centro,V01
+25,2024-03-10,Laptop Pro,Tecnología,1,1200.00,C001,Norte,V03
+26,2024-03-12,Escritorio,Mobiliario,1,250.00,C005,Oeste,V02
+27,2024-03-15,Webcam HD,Tecnología,5,90.00,C009,Este,V01
+28,2024-03-18,Monitor 4K,Tecnología,2,400.00,C010,Sur,V03
+29,2024-03-20,Mouse Inalámbrico,Tecnología,4,25.50,C006,Sur,V02
+30,2024-03-22,Laptop Pro,Tecnología,3,1200.00,C002,Norte,V01

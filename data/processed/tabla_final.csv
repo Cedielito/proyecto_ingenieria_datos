@@ -1,0 +1,28 @@
+id,fecha,producto,categoria,cantidad,precio_unitario,cliente_id,region,vendedor,total_venta,anio,mes,dia_semana,segmento_precio
+1,2024-01-03,Laptop Pro,Tecnología,2,1200.0,C001,Norte,V01,2400.0,2024,1,Wednesday,Premium
+2,2024-01-05,Mouse Inalámbrico,Tecnología,5,25.5,C002,Sur,V02,127.5,2024,1,Friday,Económico
+3,2024-01-07,Silla Ergonómica,Mobiliario,1,350.0,C003,Centro,V01,350.0,2024,1,Sunday,Medio
+4,2024-01-10,Monitor 4K,Tecnología,3,400.0,C001,Norte,V03,1200.0,2024,1,Wednesday,Medio
+5,2024-01-12,Teclado Mecánico,Tecnología,4,80.0,C004,Este,V02,320.0,2024,1,Friday,Económico
+6,2024-01-15,Escritorio,Mobiliario,2,250.0,C002,Sur,V01,500.0,2024,1,Monday,Medio
+7,2024-01-18,Audífonos Bt,Tecnología,6,60.0,C005,Oeste,V03,360.0,2024,1,Thursday,Económico
+8,2024-01-20,Laptop Pro,Tecnología,1,1200.0,C003,Centro,V02,1200.0,2024,1,Saturday,Premium
+11,2024-02-01,Monitor 4K,Tecnología,2,400.0,C002,Sur,V02,800.0,2024,2,Thursday,Medio
+12,2024-02-03,Silla Ergonómica,Mobiliario,3,350.0,C007,Norte,V01,1050.0,2024,2,Saturday,Medio
+13,2024-02-05,Mouse Inalámbrico,Tecnología,10,25.5,C004,Este,V03,255.0,2024,2,Monday,Económico
+15,2024-02-10,Escritorio,Mobiliario,4,250.0,C008,Centro,V01,1000.0,2024,2,Saturday,Medio
+16,2024-02-12,Teclado Mecánico,Tecnología,2,80.0,C001,Norte,V03,160.0,2024,2,Monday,Económico
+17,2024-02-15,Audífonos Bt,Tecnología,8,60.0,C006,Sur,V02,480.0,2024,2,Thursday,Económico
+18,2024-02-18,Webcam Hd,Tecnología,3,90.0,C002,Sur,V01,270.0,2024,2,Sunday,Económico
+19,2024-02-20,Monitor 4K,Tecnología,1,400.0,C009,Este,V03,400.0,2024,2,Tuesday,Medio
+20,2024-02-22,Laptop Pro,Tecnología,2,1200.0,C003,Centro,V02,2400.0,2024,2,Thursday,Premium
+21,2024-03-01,Mouse Inalámbrico,Tecnología,7,25.5,C007,Norte,V01,178.5,2024,3,Friday,Económico
+22,2024-03-03,Silla Ergonómica,Mobiliario,2,350.0,C010,Sur,V03,700.0,2024,3,Sunday,Medio
+23,2024-03-05,Teclado Mecánico,Tecnología,5,80.0,C004,Este,V02,400.0,2024,3,Tuesday,Económico
+24,2024-03-08,Audífonos Bt,Tecnología,3,60.0,C008,Centro,V01,180.0,2024,3,Friday,Económico
+25,2024-03-10,Laptop Pro,Tecnología,1,1200.0,C001,Norte,V03,1200.0,2024,3,Sunday,Premium
+26,2024-03-12,Escritorio,Mobiliario,1,250.0,C005,Oeste,V02,250.0,2024,3,Tuesday,Medio
+27,2024-03-15,Webcam Hd,Tecnología,5,90.0,C009,Este,V01,450.0,2024,3,Friday,Económico
+28,2024-03-18,Monitor 4K,Tecnología,2,400.0,C010,Sur,V03,800.0,2024,3,Monday,Medio
+29,2024-03-20,Mouse Inalámbrico,Tecnología,4,25.5,C006,Sur,V02,102.0,2024,3,Wednesday,Económico
+30,2024-03-22,Laptop Pro,Tecnología,3,1200.0,C002,Norte,V01,3600.0,2024,3,Friday,Premium

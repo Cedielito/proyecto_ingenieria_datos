@@ -1,0 +1,45 @@
+# Entorno virtual
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Variables sensibles - NUNCA subir
+.env
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Datos procesados grandes (opcional, depende del proyecto)
+# data/processed/
+# data/raw/
+
+# Modelos serializados grandes
+models/trained/*.pkl
+models/trained/*.pt
+models/embeddings/*.npy
+
+# Reportes generados
+reports/figures/*.png
+reports/figures/*.pdf
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# macOS
+.DS_Store
+
+# Logs
+logs/
+*.log
+
+# Distribución / packaging
+dist/
+build/
+*.egg-info/
