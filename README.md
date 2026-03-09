@@ -145,9 +145,3 @@ tree -a --dirsfirst -I '__pycache__|.ipynb_checkpoints|venv|*.egg-info'
 | Producto top | Regency Cakestand 3 Tier |
 
 ---
-
-## Equipo
-
-- Persona 1 - Ingesta y Configuración
-- Persona 2 - Preprocesamiento y Features  
-- Persona 3 - Pipeline y Tests
