@@ -145,3 +145,7 @@ tree -a --dirsfirst -I '__pycache__|.ipynb_checkpoints|venv|*.egg-info'
 | Producto top | Regency Cakestand 3 Tier |
 
 ---
+INTEGRANTES
+LUCAS CEDIEL
+JULIAN
+JOHAN CAMILO
